@@ -49,3 +49,7 @@
     color: white;
     text-align: center;
   }
+  a:link, i {
+    color: black;
+  }
+
