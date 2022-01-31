@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heimavinna</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles2.css') }}">
+</head>
+<body>
+<div class="dropdown">
+    <button class="dropbtn">Menu</button>
+    <div class="dropdown-content">
+    <a href="{{url_for('index')}}">Heim</a>
+    <a href="{{url_for('sida2')}}">Síða 2</a>
+    <a href="{{url_for('sida3')}}">Síða 3</a>
+    <a href="https://github.com/Heimavinna/heimavinna" target="_blank">Github</a>
+</div>
+
+    <h1>Svínvirkar</h1>
+</body>
+</html>
