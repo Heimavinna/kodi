@@ -4,9 +4,19 @@
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="{{ url_for('static', filename='loginStyle.css') }}">
 		<title>Login</title>
 	</head>
 	<body>
-		<h1>{{ message }}</h1>
+		<header>
+			<h1>Innskráning</h1>
+		</header>
+		<section>
+			<form action="login" method="post" class="loginBox">
+				<input class="textInput" name="username" type="text" placeholder="Notendanafn"><br>
+				<input class="textInput" name="password" type="password" placeholder="Lykilorð"><br>
+				<input class="submitBtn" type="submit" value="Innskrá">
+			</form>
+		</section>
 	</body>
 </html>

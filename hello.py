@@ -10,9 +10,15 @@ def index():
     return render_template("index.html")
 
 
-@app.route('/login')
+@app.route('/login', methods=['GET', 'POST'])
 def login():
-    return render_template('login.html', message='Epic message')
+    if request.method == 'POST':
+        form_data = request.form.to_dict()
+        print(form_data)
+
+        currentUsername = form_data['username']
+        currentPassword = form_data['password']
+    return render_template('login.html')
 
 
 

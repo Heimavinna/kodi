@@ -1,0 +1,40 @@
+* {
+    font-family: sans-serif;
+}
+
+body {
+    margin: auto;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginBox {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.textInput {
+    padding: .5em;
+}
+.textInput:focus {
+    border-radius: 8px;
+}
+
+.submitBtn {
+    background-color: #4CAF50;
+    border: none;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 32px;
+    font-size: 16px;
+    border-radius: 8px;
+}
+.submitBtn:hover {
+    cursor: pointer;
+}
