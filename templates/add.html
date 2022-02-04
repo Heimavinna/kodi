@@ -1,0 +1,14 @@
+{% extends 'index.html' %}
+{% block main %}
+    <h2>
+        Nýtt To-do
+    </h2>
+    <ul>
+        <form action="/" method="POST">
+        <li><input name="nafn" placeholder="Nafn"></li>
+        <li><input name="dags" placeholder="Dags"></li>
+        <li><input name="stig" placeholder="Stig"></li>
+        <button type="submit" value="submit"></button>
+        </form>
+    </ul>
+{% endblock %}

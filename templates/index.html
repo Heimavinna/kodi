@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="static/style.css">
+    <title>Document</title>
+</head>
+<body onload="test()">
+    {% block main %}
+    <h2>Use JavaScript to Change Text</h2>  
+    {% endblock %}
+    <form method="GET" action="/add">
+    <button class="main" type="submit">
+        <svg width="80" height="80" viewBox="0 0 330 336" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g id="Frame 1">
+            <rect id="hitt" y="150" width="330" height="66" fill="#C4C4C4"/>
+            <g id="bly">
+            <rect id="Rectangle 3" x="132" y="300" width="66" height="36" fill="#C4C4C4"/>
+            <rect id="Rectangle 2" x="132" y="300" width="258.621" height="66" transform="rotate(-90 132 300)" fill="#C4C4C4"/>
+            <path id="Polygon 1" d="M165 0L197.909 41.3793H132.091L165 0Z" fill="#C4C4C4"/>
+            </g>
+            </g>
+        </svg>
+    </button> 
+    </form>
+    {% if content %}
+        {% for x,y in content.items() %}
+        {{ y }}
+        {% endfor %}
+    {% endif %}
+    <script src="static/app.js"></script>
+</body>
+</html>
