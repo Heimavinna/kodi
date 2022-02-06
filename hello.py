@@ -9,7 +9,7 @@ app = Flask(__name__)
 def index():
 
 
-    return render_template("index.html")
+    return render_template("index3.html")
 
 @app.route('/sida2', methods=['GET', 'POST'])
 def sida2():
@@ -34,7 +34,7 @@ def sida3():
         return "redirect(url_for('index'))"
 
     # show the form, it wasn't submitted
-    return render_template('index3.html')
+    return render_template('index.html')
 
 
 
