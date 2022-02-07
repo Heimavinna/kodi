@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>404 Síða fannst ekki</title>
+    </head>
+    <body>
+        <style>
+            * {
+                font-family: sans-serif;
+            }
+            body {
+                margin: auto;
+                display: grid;
+                justify-content: center;
+                padding: 10em;
+                text-align: center;
+            }
+            .error {
+                color: red;
+            }
+            .linkClass {
+                color: black;
+            }
+            .linkClass:hover {
+                color: blue;
+            }
+        </style>
+
+        <h2><span class="error">404</span> - Síðan fannst ekki</h2>
+        <img src="{{ url_for('static', filename='confused.jpg') }}" alt="huh?"> <br>
+        <a href="{{ url_for('index') }}" class="linkClass">Heim</a>
+    </body>
+</html>

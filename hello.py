@@ -49,6 +49,12 @@ def sida3():
 
 
 
+
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template('404.html'), 404
+
+
 # This starts the web app 
 if __name__ == '__main__':
     app.run(debug=True, use_reloader=True)
