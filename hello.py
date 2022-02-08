@@ -1,4 +1,3 @@
-# import Flask class in Python
 from flask import Flask, request, url_for, redirect, render_template
 
 
