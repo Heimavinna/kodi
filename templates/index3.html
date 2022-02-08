@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Heimavinna</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles3.css') }}">
+    <title>Heimavinna main</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles4.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+
+    
 </head>
 <div class="navbar">
     <a href="{{ url_for('index') }}">Heim</a>
@@ -18,13 +21,26 @@
       </div>
     </div>
   </div>
+
+<header>
+  <h2 class="container">Heimavinna</h2>
+</header>
+
 <body>
-  
-    <h1>Halló Heimur hér kemur heimavinna</h1>
-    <h1>Halló Heimur hér kemur heimavinna</h1>
-    <h1>Halló Heimur hér kemur heimavinna</h1>
-    <h1>Halló Heimur hér kemur heimavinna</h1>
-    <h1>Halló Heimur hér kemur heimavinna</h1>
+  <div class="main"> 
+    <form>
+        <input type="text" placeholder="Hvað þarftu að læra?">
+        <button type="submit"><i class="fas fa-plus-square"></i></button>
+    </form>
+
+    <div class="todoList">
+      <ul>
+      </ul>
+      <a class="clearAll" id="clearAll">Hreinsa</a>
+  </div>
+
+</div>
+    <script type="text/javascript" src="/static/app.js"></script>
 </body>
 <style>
   .footer {
