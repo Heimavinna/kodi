@@ -1,5 +1,5 @@
-# import Flask class in Python
 from flask import Flask, request, url_for, redirect, render_template
+
 
 
 # Create app, that hosts the application. Don't worry about that __name__ object, it's just a convention.
@@ -45,7 +45,7 @@ def sida3():
         return "redirect(url_for('index'))"
 
     # show the form, it wasn't submitted
-    return render_template('index3.html')
+    return render_template('index.html')
 
 
 
