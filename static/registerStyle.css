@@ -1,0 +1,40 @@
+* {
+	font-family: sans-serif;
+}
+
+header {
+	padding-top: 2em;
+	text-align: center;
+}
+
+.registerBox {
+	max-width: 10em;
+	margin: auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	gap: .25em;
+}
+
+.textInput {
+	padding: 7px 24px;
+}
+.textInput:focus {
+	border-radius: 8px;
+}
+
+.submitBtn {
+	background-color: #4CAF50;
+	border: none;
+	color: #ffffff;
+	width: 100%;
+	text-align: center;
+	text-decoration: none;
+	padding: 10px 32px;
+	font-size: 16px;
+	border-radius: 8px;
+}
+.submitBtn:hover {
+	cursor: pointer;
+}

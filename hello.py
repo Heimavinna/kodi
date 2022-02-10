@@ -21,6 +21,13 @@ def login():
     return render_template('login.html')
 
 
+@app.route('/register', methods=['GET', 'POST'])
+def register():
+    if request.method == 'POST':
+        form_data = request.form.to_dict()
+        print(form_data)
+    return render_template('register.html')
+
 
 @app.route('/sida2', methods=['GET', 'POST'])
 def sida2():
