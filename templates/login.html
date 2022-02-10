@@ -13,11 +13,13 @@
 		</header>
 		<section>
 			<form action="login" method="post" class="loginBox">
-				<input class="textInput" name="username" type="text" placeholder="Notendanafn" autocomplete="off">
-				<input class="textInput" name="password" type="password" placeholder="Lykilorð">
-				<input class="submitBtn" type="submit" value="Innskrá">
+				<input id="Lusername" class="textInput" name="username" type="text" placeholder="Notendanafn" autocomplete="off" spellcheck="false" required onkeypress="return event.charCode != 32" required>
+				<input id="Lpassword" class="textInput" name="password" type="password" placeholder="Lykilorð" spellcheck="false" required onkeypress="return event.charCode != 32" required>
+				<input id="LsubmitBtn" class="submitBtn" type="submit" value="Innskrá">
 			</form>
-			<a href="{{ url_for('register') }}"><p class="registerUser">Nýr Notandi</p></a>
+			<a href="{{ url_for('register') }}"><p class="linkClass">Nýr Notandi</p></a>
 		</section>
+
+		<script src="{{ url_for('static', filename='loginJSfunctions.js') }}"></script>
 	</body>
 </html>

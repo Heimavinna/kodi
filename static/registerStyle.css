@@ -36,3 +36,12 @@ header {
 	cursor: pointer;
 	background-color: #009900;
 }
+
+.linkClass {
+    padding-top: 1em;
+    text-align: center;
+    color: #000000;
+}
+.linkClass:hover {
+    color: #009900;
+}

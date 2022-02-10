@@ -13,22 +13,14 @@
 		</header>
 		<section>
 			<form action="register" method="post" class="registerBox">
-				<input id="realName" class="textInput" name="realname" type="text" spellcheck="false" placeholder="Nafn" autocomplete="off" required>
-				<input id="username" class="textInput" name="username" type="text" spellcheck="false" placeholder="Notendanafn" autocomplete="off" onkeypress="return event.charCode != 32" required>
-				<input id="password" class="textInput" name="password" type="password" spellcheck="false" placeholder="Lykilorð" onkeypress="return event.charCode != 32" required>
-				<input id="submitBtn" class="submitBtn" type="submit" value="Skrá Notanda">
+				<input id="RrealName" class="textInput" name="realname" type="text" spellcheck="false" placeholder="Nafn" autocomplete="off" required>
+				<input id="Rusername" class="textInput" name="username" type="text" spellcheck="false" placeholder="Notendanafn" autocomplete="off" onkeypress="return event.charCode != 32" required>
+				<input id="Rpassword" class="textInput" name="password" type="password" spellcheck="false" placeholder="Lykilorð" onkeypress="return event.charCode != 32" required>
+				<input id="RsubmitBtn" class="submitBtn" type="submit" value="Skrá Notanda">
 			</form>
+			<a href="{{ url_for('login') }}"><p class="linkClass">Ég á aðgang</p></a>
 		</section>
 
-		<script>
-			function show_hide_password() {
-				let passwordField = document.getElementById('passwordField');
-				if(passwordField.type == 'password') {
-					passwordField.type = 'text';
-				} else {
-					passwordField.type = 'Password';
-				}
-			}
-		</script>
+		<script src="{{ url_for('static', filename='loginJSfunctions.js') }}"></script>
 	</body>
 </html>
