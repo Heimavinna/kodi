@@ -9,13 +9,13 @@ html {
 }
 
 .container {
-    width: 150px;
+    width: 300px;
     display: flex;
     justify-content: center;
     flex-direction: column;
     margin: auto;
     font-family: 'Raleway', sans-serif;
-    padding-top: 0.5em;
+    padding-top: 1em;
 }
 
 .logo {
