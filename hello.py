@@ -7,7 +7,8 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template("index.html")
+    return render_template("index3.html")
+    
 
 
 @app.route('/login', methods=['GET', 'POST'])
