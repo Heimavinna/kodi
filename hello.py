@@ -1,6 +1,6 @@
 from flask import Flask, request, url_for, redirect, render_template
 
-#Snorri test branch
+
 
 # Create app, that hosts the application. Don't worry about that __name__ object, it's just a convention.
 app = Flask(__name__)
