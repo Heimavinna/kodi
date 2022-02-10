@@ -17,6 +17,12 @@ body {
     margin: auto;
 }
 
+.registerUser {
+    text-align: center;
+    text-decoration: none;
+    color: purple;
+}
+
 .textInput {
     padding: .5em;
 }

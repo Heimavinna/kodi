@@ -13,10 +13,10 @@
 		</header>
 		<section>
 			<form action="register" method="post" class="registerBox">
-				<input class="textInput" name="realname" type="text" placeholder="Nafn" autocomplete="off">
-				<input class="textInput" name="username" type="text" placeholder="Notendanafn" autocomplete="off">
-				<input class="textInput" name="password" type="password" placeholder="Lykilorð" id="passwordField">
-				<input class="submitBtn" type="submit" value="Skrá Notanda">
+				<input id="realName" class="textInput" name="realname" type="text" spellcheck="false" placeholder="Nafn" autocomplete="off" required>
+				<input id="username" class="textInput" name="username" type="text" spellcheck="false" placeholder="Notendanafn" autocomplete="off" onkeypress="return event.charCode != 32" required>
+				<input id="password" class="textInput" name="password" type="password" spellcheck="false" placeholder="Lykilorð" onkeypress="return event.charCode != 32" required>
+				<input id="submitBtn" class="submitBtn" type="submit" value="Skrá Notanda">
 			</form>
 		</section>
 

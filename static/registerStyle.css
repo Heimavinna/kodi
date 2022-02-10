@@ -20,9 +20,6 @@ header {
 .textInput {
 	padding: 7px 24px;
 }
-.textInput:focus {
-	border-radius: 8px;
-}
 
 .submitBtn {
 	background-color: #4CAF50;
@@ -37,4 +34,5 @@ header {
 }
 .submitBtn:hover {
 	cursor: pointer;
+	background-color: #009900;
 }
