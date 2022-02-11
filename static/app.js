@@ -1,3 +1,4 @@
+
 // Selectors
 document.querySelector('form').addEventListener('submit', handleSubmitForm);
 
@@ -9,6 +10,7 @@ function handleSubmitForm(e) {
         addTodo(input.value);
     input.value = '';
 }
+
 
 // Helpers
 function addTodo(todo) {
@@ -22,6 +24,7 @@ function addTodo(todo) {
     li.classList.add('todo-list-item');
     ul.appendChild(li);
 }
+
 
 document.querySelector('ul').addEventListener('click', handleClickDeleteOrCheck);
 
@@ -55,3 +58,4 @@ document.getElementById('clearAll').addEventListener('click', handleClearAll);
 function handleClearAll(e) {
     document.querySelector('ul').innerHTML = '';
 }
+

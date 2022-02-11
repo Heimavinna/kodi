@@ -38,3 +38,12 @@ body {
 .submitBtn:hover {
     cursor: pointer;
 }
+.container {
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+    font-family: 'Raleway', sans-serif;
+    padding-top: 2em;
+}

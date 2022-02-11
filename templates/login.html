@@ -6,13 +6,16 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="{{ url_for('static', filename='loginStyle.css') }}">
 		<title>Login</title>
+		<link rel="icon" href="/static/layer1_CKe_icon.ico">
 	</head>
 	<body>
 		<header>
-			<h1>Innskráning</h1>
+			<h1 class="container"></h1>
 		</header>
 		<section>
+
 			<form action="login" method="post" class="loginBox">
+				<object class="container" type="image/svg+xml" data="/static/heimavinnalogo.svg"></object>
 				<input class="textInput" name="username" type="text" placeholder="Notendanafn">
 				<input class="textInput" name="password" type="password" placeholder="Lykilorð">
 				<input class="submitBtn" type="submit" value="Innskrá">
