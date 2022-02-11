@@ -10,6 +10,7 @@
 	<body>
 		<header>
 			<h1>Innskráning</h1>
+			<img src="{{ url_for('static', filename='usericon.png') }}" style="max-width: 5%; max-height: 5%;" alt="">
 		</header>
 		<section>
 			<form action="login" method="post" class="loginBox">
@@ -21,5 +22,6 @@
 		</section>
 
 		<script src="{{ url_for('static', filename='loginJSfunctions.js') }}"></script>
+		<script src="{{ url_for('static', filename='toggleDarkMode.js') }}"></script>
 	</body>
 </html>

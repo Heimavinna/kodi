@@ -8,7 +8,7 @@ header {
 }
 
 .registerBox {
-	max-width: 10em;
+	max-width: 12em;
 	margin: auto;
 	display: flex;
 	flex-wrap: wrap;
