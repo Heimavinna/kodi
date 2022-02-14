@@ -8,7 +8,7 @@
 <body>
     <h1>Heimavinna</h1>
 
-    <form action="">
+    <form action="/add" method="post">
         <div>
             <label for="title">Heimavinna</label>
             <input type="text" name="title" placeholder="Sláðu inn heimavinnu">
@@ -17,5 +17,22 @@
 
 
     </form>
+
+    {% for todo in todo_list %}
+        <p> {{todo.id }} | {{ todo.title }} </p>
+
+        {% if todo.complete == False %}
+            <span>Ekki búið</span>
+
+        {% else%}
+            <span>Búið</span>
+        {% endif%}
+
+        <a href="/update/{{todo.id}}">Uppfæra</a>
+        <a href="/delete/{{todo.id}}">Eyða</a>
+
+
+    {% endfor %}
+
 </body>
 </html>
