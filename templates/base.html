@@ -19,7 +19,7 @@
     <form action="/add" method="post">
         
             <label for="title"></label>
-            <input type="text" name="title" placeholder="Sláðu inn heimavinnu">
+            <input type="text" name="title" placeholder="Sláðu inn heimavinnu" autofocus="autofocus" onfocus="this.select()">
             <button type="submit">Bæta við</button>
         </div>
 
@@ -31,10 +31,10 @@
         <p class="ui big header"> {{todo.id }} | {{ todo.title }} </p>
 
         {% if todo.complete == False %}
-            <span>Ekki búið</span>
+            <span class="ui gray label">Ekki búið</span>
 
         {% else%}
-            <span>Búið</span>
+            <span class="ui green label">Búið</span>
         {% endif%}
 
         <a class="ui blue button" href="/update/{{todo.id}}">Uppfæra</a>
@@ -45,6 +45,7 @@
     <style>
         .footer {
           position: fixed;
+
           left: 0;
           bottom: 0;
           width: 100%;
