@@ -18,6 +18,7 @@ def index():
     print(todo_list)
     return render_template('base.html', todo_list=todo_list)
 
+
 @app.route("/add", methods=["POST"])
 def add():
     # adda new item
