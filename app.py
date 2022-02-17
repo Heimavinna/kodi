@@ -12,11 +12,33 @@ class Todo(db.Model):
     complete = db.Column(db.Boolean)
 
 
-@app.route('/')
+@app.route('/main')
 def index():
     todo_list = Todo.query.all()
     print(todo_list)
     return render_template('base.html', todo_list=todo_list)
+
+# Login og register route
+
+@app.route('/', methods=['GET', 'POST'])
+def login():
+    if request.method == 'POST':
+        form_data = request.form.to_dict()
+        print(form_data)
+
+        currentUsername = form_data['username']
+        currentPassword = form_data['password']
+    return render_template('login.html')
+
+
+@app.route('/register', methods=['GET', 'POST'])
+def register():
+    if request.method == 'POST':
+        form_data = request.form.to_dict()
+        print(form_data)
+    return render_template('register.html')
+
+
 
 
 @app.route("/add", methods=["POST"])
