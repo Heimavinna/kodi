@@ -10,3 +10,7 @@ var bara að kynna mér flask og þetta dót. Þarf ekkert endilega að gera nei
 
 var til að kalla á funciton i JS
 ### value="new" onclick="test()"
+
+
+### testsoss
+dslafjlksa
