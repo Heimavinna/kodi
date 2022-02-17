@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block header %}
+<title>Login</title>
+{% endblock %}
+{% block content %}
+    <h2> Virkar þetta? </h2>
+    <form method="POST" action="">
+        {{ form.hidden_tag() }}
+        {{ form.username }}
+        {{ form.password }}
+        {{ form.submit }}
+    </form>
+    <a href="{{ url_for('register') }}"> Áttu ekki notanda? Búðu til slíkann! </a>
+{% endblock %}

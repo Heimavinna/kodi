@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<title> Virkandi Database </title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<nav>
+<h1> Velkomin/nn </h1>
+    <a href="{{ url_for('login') }}"> Skrá inn </a>
+    <a href="{{ url_for('register') }}"> Skrá nýjann notanda </a>
+</nav>
+<section>
+<header>
+    {% block header%}
+    {% endblock %}
+</header>
+    {% block content %}
+    {% endblock %}
+</section> 

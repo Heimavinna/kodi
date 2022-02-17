@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+<title>Heimasida</title>
+    <h1> Blessaður!</h1>
+    {% for x in todo %}
+        <ul>
+
+        <li class="nafn">{{ x.name }}</li>
+        <li class="todo">{{ x.todo }}</li>
+        <li class="timi">{{ x.done }}</li>
+        <li class="eyda"> <a href=""> Eyða </a> </li>
+
+        </ul>
+    {% endfor %}
+    <br>
+    <a href="{{ url_for('logout') }}"> Log-out</a> 
+    <br>
+    <a href="{{ url_for('addtodo') }}">Bæta við todo</a>   
+{% endblock %}
