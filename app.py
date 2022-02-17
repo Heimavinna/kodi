@@ -13,14 +13,18 @@ class Todo(db.Model):
 
 
 @app.route('/main')
-def index():
+def main():
     todo_list = Todo.query.all()
     print(todo_list)
     return render_template('base.html', todo_list=todo_list)
 
 # Login og register route
 
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/')
+def index():
+    return redirect('login')
+
+@app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
         form_data = request.form.to_dict()
