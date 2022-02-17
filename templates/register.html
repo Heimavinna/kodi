@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="{{ url_for('static', filename='registerStyle.css') }}">
+		<title>Nýr Notandi</title>
+	</head>
+	<body>
+		<header>
+			<h1>Nýr Notandi</h1>
+			<img src="{{ url_for('static', filename='usericon.png') }}" style="max-width: 5%; max-height: 5%;" alt="">
+		</header>
+		<section>
+			<form action="register" method="post" class="registerBox">
+				<input id="RrealName" class="textInput" name="realname" type="text" spellcheck="false" placeholder="Nafn" autocomplete="off" required>
+				<input id="Rusername" class="textInput" name="username" type="text" spellcheck="false" placeholder="Notendanafn" autocomplete="off" onkeypress="return event.charCode != 32" required>
+				<input id="Rpassword" class="textInput" name="password" type="password" spellcheck="false" placeholder="Lykilorð" onkeypress="return event.charCode != 32" required>
+				<input id="RsubmitBtn" class="submitBtn" type="submit" value="Skrá Notanda">
+			</form>
+			<a href="{{ url_for('login') }}"><p class="linkClass">Ég á aðgang</p></a>
+		</section>
+
+		<script src="{{ url_for('static', filename='loginJSfunctions.js') }}"></script>
+	</body>
+</html>
