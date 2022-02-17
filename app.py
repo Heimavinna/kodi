@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, session
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
@@ -12,8 +12,8 @@ class Todo(db.Model):
     complete = db.Column(db.Boolean)
 
 
-@app.route('/main')
-def main():
+@app.route('/main/<user>')
+def main(user):
     todo_list = Todo.query.all()
     print(todo_list)
     return render_template('base.html', todo_list=todo_list)
@@ -32,6 +32,7 @@ def login():
 
         currentUsername = form_data['username']
         currentPassword = form_data['password']
+        return redirect(url_for('main', user=currentUsername))
     return render_template('login.html')
 
 
