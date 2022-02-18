@@ -82,6 +82,32 @@ def register():
         return redirect(url_for('login'))
     return render_template('register.html')
 
+# Login og register route
+
+@app.route('/')
+def index():
+    return redirect('login')
+
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    if request.method == 'POST':
+        form_data = request.form.to_dict()
+        print(form_data)
+
+        currentUsername = form_data['username']
+        currentPassword = form_data['password']
+    return render_template('login.html')
+
+
+@app.route('/register', methods=['GET', 'POST'])
+def register():
+    if request.method == 'POST':
+        form_data = request.form.to_dict()
+        print(form_data)
+    return render_template('register.html')
+
+
+
 
 @app.route("/add", methods=["POST"])
 def add():
