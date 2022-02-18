@@ -10,8 +10,20 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
     <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
 </head>
+<div class="navbar">
+    <a href="{{ url_for('index') }}">Heim</a>
+    <div class="dropdown">
+      <button class="dropbtn">Menu
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="">Stillingar</a>
+        <a href=" {{ url_for('login') }} "> Logout </a>
+      </div>
+    </div>
+  </div>
 <header>
-    <a href=" {{ url_for('login') }} "> Logout </a>
+
     <object class="container" type="image/svg+xml" data="/static/heimavinnalogo.svg"></object>
   </header>
 <body class="html">
@@ -29,7 +41,7 @@
 
     {% for todo in todo_list %}
     <div class="ui segment">
-        <p class="ui big header"> {{todo.id }} | {{ todo.title }} </p>
+        <p class="ui big header"> <!--{{todo.id }} |--> {{ todo.title }} </p>
 
         {% if todo.complete == False %}
             <span class="ui gray label">Ekki búið</span>
