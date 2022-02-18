@@ -81,7 +81,9 @@ def logout():
     logout_user()
     return redirect(url_for('login'))
 
-# Login og register route
+@app.route('/settings')
+def settings():
+    return render_template('settings.html')
 
 
 @app.route("/add", methods=["POST"])
