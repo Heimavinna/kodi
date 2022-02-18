@@ -42,7 +42,8 @@ class Todo(db.Model):
 def index():
     if 'username' in session:
         u_id = current_user.id
-        return render_template('base.html', todo_list=Todo.query.filter_by(user_id=u_id))
+        user = current_user
+        return render_template('base.html', todo_list=Todo.query.filter_by(user_id=u_id), user = user)
     return redirect(url_for('login'))
 
 @app.route('/register', methods=['GET', 'POST'])

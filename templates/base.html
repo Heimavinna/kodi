@@ -25,11 +25,12 @@
 <header>
 
     <object class="container" type="image/svg+xml" data="/static/heimavinnalogo.svg"></object>
+    <h3 class="container2">Velkomin/nn {{ user.username }}!</h3>
   </header>
 <body class="html">
 
     <div class="main">
-    <form action="/add" method="post">
+    <form class="form" action="/add" method="post">
         
             <label for="title"></label>
             <input type="text" name="title" placeholder="Sláðu inn heimavinnu" autofocus="autofocus" onfocus="this.select()" required>

@@ -18,6 +18,17 @@
     padding-top: 1em;
 }
 
+.container2 {
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+  font-family: 'Raleway', sans-serif;
+  padding-top: 0em;
+}
+
+
 .logo {
     display: flex;
     margin: auto;
@@ -189,3 +200,40 @@ i {
     opacity: 0;
 }
 
+/* ---------------- BREAKPOINTS ----------------
+@media screen and (max-width: 500px) {
+  .html, .body{
+    max-width: 100%;
+    position: absolute;
+    overflow-x:hidden;
+    overflow-y:scroll;
+  }
+  .body{
+    overflow-x:hidden;
+  }
+
+  .container{
+    display:none;
+  }
+  .container2{
+    display: none;
+  }
+
+  .form{
+    display: block;
+    width: 60%;
+    overflow: hidden;
+  }
+  .navbar{
+    width: 65%;
+    overflow-x: hidden;
+    
+  }
+  .footer{
+    display: none;
+  }
+  .ui{
+    width: 40%;
+  }
+}
+*/
