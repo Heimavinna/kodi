@@ -40,11 +40,24 @@ class Todo(db.Model):
 
 @app.route('/')
 def index():
-
     if 'username' in session:
         u_id = current_user.id
         return render_template('base.html', todo_list=Todo.query.filter_by(user_id=u_id))
     return redirect(url_for('login'))
+
+@app.route('/register', methods=['GET', 'POST'])
+def register():
+    if request.method == 'POST':
+        form_data = request.form.to_dict()
+        password = form_data['password']
+        username = form_data['username']
+        rugald_passw = bcrypt.generate_password_hash(password)
+        nyr_notandi = User(username=username, password=rugald_passw)
+        db.session.add(nyr_notandi)
+        db.session.commit()
+        print(form_data)
+        return redirect(url_for('login'))
+    return render_template('register.html')
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -68,45 +81,7 @@ def logout():
     logout_user()
     return redirect(url_for('login'))
 
-@app.route('/register', methods=['GET', 'POST'])
-def register():
-    if request.method == 'POST':
-        form_data = request.form.to_dict()
-        password = form_data['password']
-        username = form_data['username']
-        rugald_passw = bcrypt.generate_password_hash(password)
-        nyr_notandi = User(username=username, password=rugald_passw)
-        db.session.add(nyr_notandi)
-        db.session.commit()
-        print(form_data)
-        return redirect(url_for('login'))
-    return render_template('register.html')
-
 # Login og register route
-
-@app.route('/')
-def index():
-    return redirect('login')
-
-@app.route('/login', methods=['GET', 'POST'])
-def login():
-    if request.method == 'POST':
-        form_data = request.form.to_dict()
-        print(form_data)
-
-        currentUsername = form_data['username']
-        currentPassword = form_data['password']
-    return render_template('login.html')
-
-
-@app.route('/register', methods=['GET', 'POST'])
-def register():
-    if request.method == 'POST':
-        form_data = request.form.to_dict()
-        print(form_data)
-    return render_template('register.html')
-
-
 
 
 @app.route("/add", methods=["POST"])
