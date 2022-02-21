@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
     <title>Heimavinna</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles4.css') }}">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
     <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
 </head>
+<div class="wrapper">
 <div class="navbar">
     <a href="{{ url_for('index') }}">Heim</a>
     <div class="dropdown">
@@ -79,6 +80,7 @@
         <a href="https://github.com/Heimavinna/kodi" target="_blank">
       <i class="fab fa-github" style='font-size:30px'></i></a>
       </div>
+    </div>
 
 </body>
 </html>

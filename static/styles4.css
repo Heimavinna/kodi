@@ -200,10 +200,11 @@ i {
     opacity: 0;
 }
 
-/* ---------------- BREAKPOINTS ----------------
-@media screen and (max-width: 500px) {
+/* ---------------- BREAKPOINTS ---------------- */
+
+@media screen and (max-width: 390px) {
   .html, .body{
-    max-width: 100%;
+    max-width: 50%;
     position: absolute;
     overflow-x:hidden;
     overflow-y:scroll;
@@ -222,7 +223,7 @@ i {
   .form{
     display: block;
     width: 60%;
-    overflow: hidden;
+    overflow-x: hidden;
   }
   .navbar{
     width: 65%;
@@ -235,5 +236,54 @@ i {
   .ui{
     width: 40%;
   }
+
+  .wrapper{
+    overflow:hidden;
+    position: relative;
+  }
 }
-*/
+
+
+@media screen and (max-width: 414px) {
+
+  .wrapper{
+    overflow:hidden;
+    position: relative;
+  }
+  .html, .body{
+    max-width: 50%;
+    position: absolute;
+    overflow-x:hidden;
+    overflow-y:scroll;
+  }
+  .body{
+    overflow-x:hidden;
+  }
+
+  .container{
+    display:none;
+  }
+  .container2{
+    display: none;
+  }
+
+  .form{
+    display: block;
+    width: 60%;
+    overflow-x: hidden;
+  }
+  .navbar{
+    width: 70%;
+    overflow-x: hidden;
+    
+  }
+  .footer{
+    display: none;
+  }
+  .ui{
+    width: 40%;
+  }
+
+
+
+}
