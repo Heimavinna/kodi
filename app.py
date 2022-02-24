@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for, session
 from flask_sqlalchemy import SQLAlchemy
+from sqlalchemy import update
 from flask_login import UserMixin, login_user, LoginManager, login_required, logout_user, current_user
 from flask_bcrypt import Bcrypt
 
@@ -65,7 +66,7 @@ def login():
     session.pop('username', None)
     if request.method == 'POST':
         form_data = request.form.to_dict()
-        print(form_data)
+        #print(form_data)
         currentUsername = form_data['username']
         currentPassword = form_data['password']
         notendur = User.query.filter_by(username=currentUsername).first()
@@ -85,6 +86,18 @@ def logout():
 @app.route('/settings')
 def settings():
     return render_template('settings.html')
+@app.route('/changepass', methods=['GET','POST'])
+def change_pass():
+    if request.method == 'POST':
+        form = request.form.to_dict()
+        password = form['password']
+        rugald_passw = bcrypt.generate_password_hash(password)
+        user = User.query.get(current_user.id)
+        user.password = rugald_passw
+        db.session.commit()
+        return redirect(url_for('index'))
+        
+    return render_template('change.html', user=current_user)
 
 
 @app.route("/add", methods=["POST"])
