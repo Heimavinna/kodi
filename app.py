@@ -8,7 +8,7 @@ app = Flask(__name__)
 db = SQLAlchemy(app)
 bcrypt = Bcrypt(app)
 
-app.config['SECRET_KEY'] = 'baraeinhvad'
+app.config['SECRET_KEY'] = 'þetta er ekki lykillinn'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///appdb.db'
 #app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
